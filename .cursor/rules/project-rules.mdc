@@ -1,0 +1,30 @@
+---
+description: Core project context, stack, and conventions for this repo
+globs:
+alwaysApply: true
+---
+
+# Project Context
+
+[One-line description of the capstone project — e.g. "AI tool that quizzes engineers on a codebase and generates gap-focused documentation."]
+
+## Stack
+
+- Frontend: React + TypeScript + Vite
+- Styling: Tailwind CSS
+- Backend/logic: Node.js
+- AI: Claude API
+- Package manager: npm
+
+## Conventions
+
+- Functional components only, no class components
+- TypeScript strict mode — no `any`, use `unknown` + type guards
+- Named exports only, no default exports
+- Commit messages follow Conventional Commits (`feat:`, `fix:`, `docs:`, `chore:`, `refactor:`)
+- Run `npm run lint` before committing
+
+## Architecture Notes
+
+- Keep AI-analysis logic (repo parsing, decision-map extraction) separate from UI components
+- API keys and secrets go in `.env`, never committed — check `.gitignore` before adding new env vars
